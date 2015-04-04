@@ -1,0 +1,27 @@
+<!-- Main component for a primary marketing message or call to action -->
+<div class="container">
+  <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/login">Login</a></li>
+            <li role="presentation" class="active"><a href="/dashboard">Dashboard</a></li>
+            <li role="presentation"><a href="/register">Register</a></li>
+            <li role="presentation"><a href="/logout">Logout</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">CD WFC</h3>
+  </div>
+
+      <div class="jumbotron">
+
+        <h3><%=@card.header%></h3>
+        <h2><%=@card.question%></h2>
+        
+        <div class="form">
+          <form action='/card/submit/<%=@card.id%>' method='post'><input type="input"  name="cards[user_input]" ><br><br><button type="submit" class="btn btn-primary btn-lg">Submit</button></form>
+
+        </div>
+
+    </div> <!-- /container -->
+</div>

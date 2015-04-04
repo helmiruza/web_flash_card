@@ -1,0 +1,16 @@
+Elephant	Gajah
+Tiger	Harimau
+Lion	Singa
+Crocodile	Buaya
+Pig	Babi
+Horse	Kuda
+Bat	Kelawar
+Owl	Burung Hantu
+Peacock	Burung Merak
+Cat	Kucing
+Rat	Tikus
+Camel	Unta
+Snake	Ular
+Panda	Panda
+Scorpion	Kala Jengking
+Tapir	Tenuk

@@ -1,0 +1,46 @@
+<!-- Main component for a primary marketing message or call to action -->
+<div class="container">
+	<div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/dashboard">Dashboard</a></li>
+            <li role="presentation" class="active"><a href="/login">Login</a></li>
+            <li role="presentation"><a href="/register">Register</a></li>
+            <li role="presentation"><a href="/logout">Logout</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">CD WFC</h3>
+      </div>
+	  
+	  <div class="jumbotron">
+
+		<h1>Round Results #<%=current_user.rounds.count%></h1>
+		<p>Correct Answers : <%=current_round.correct_guess%> | Incorrect Answers : <%=current_round.incorrect_guess%></p>
+			
+		<table class="table table-condensed">
+			
+			<tr>
+		    <td>#</td>
+		    <td>Question</td> 
+		    <td>Answer</td>
+		    <td>Your Answer</td>
+			</tr>
+			<% @allguesses.each_with_index do |guess,index| %>
+			<% answer = guess.card.answer %>
+			<% youranswer = guess.answer %>
+			<tr>
+				
+		    <td><%= index + 1 %></td>
+		    <td><%= guess.card.question %></td> 
+		    <td><%= answer.capitalize %></td>
+		    <td><%= youranswer %></td>
+		    <%end%>
+
+		  </tr>
+		</table>
+
+	  </div>
+
+	</div> <!-- /container -->
+</div>
